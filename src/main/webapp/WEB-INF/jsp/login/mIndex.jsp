@@ -32,6 +32,7 @@
     <h2><span class="icon-user"></span>基本设置 </h2>
     <ul style="display: block">
         <li><a href="${ctx}/itemcategory/findBySql" target="right"><span class="icon-caret-right"></span>类目管理</a> </li>
+        <li><a href="${ctx}/user/findBySql" target="right"><span class="icon-caret-right"></span>用户管理</a> </li>
         <li><a href="#" target="right"><span class="icon-caret-right"></span>商品管理</a> </li>
         <li><a href="#" target="right"><span class="icon-caret-right"></span>订单管理</a> </li>
         <li><a href="#" target="right"><span class="icon-caret-right"></span>公告管理</a> </li>
