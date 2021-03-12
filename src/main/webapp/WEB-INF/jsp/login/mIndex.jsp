@@ -33,7 +33,7 @@
     <ul style="display: block">
         <li><a href="${ctx}/itemcategory/findBySql" target="right"><span class="icon-caret-right"></span>类目管理</a> </li>
         <li><a href="${ctx}/user/findBySql" target="right"><span class="icon-caret-right"></span>用户管理</a> </li>
-        <li><a href="${ctx}/itemcategory/findBySql" target="right"><span class="icon-caret-right"></span>商品管理</a> </li>
+        <li><a href="${ctx}/item/findBySql" target="right"><span class="icon-caret-right"></span>商品管理</a> </li>
         <li><a href="${ctx}/itemorder/findBySql" target="right"><span class="icon-caret-right"></span>订单管理</a> </li>
         <li><a href="#" target="right"><span class="icon-caret-right"></span>公告管理</a> </li>
         <li><a href="#" target="right"><span class="icon-caret-right"></span>留言管理</a> </li>
