@@ -2,5 +2,5 @@
 
 
 <%
-    response.sendRedirect("login/login");
+    response.sendRedirect("login/uIndex");
 %>
