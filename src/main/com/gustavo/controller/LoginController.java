@@ -1,13 +1,11 @@
 package com.gustavo.controller;
 
 import com.gustavo.base.BaseController;
-import com.gustavo.po.CategoryDto;
-import com.gustavo.po.Item;
-import com.gustavo.po.ItemCategory;
-import com.gustavo.po.Manage;
+import com.gustavo.po.*;
 import com.gustavo.service.ItemCategoryService;
 import com.gustavo.service.ItemService;
 import com.gustavo.service.ManageService;
+import com.gustavo.service.UserService;
 import com.gustavo.utils.Consts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -36,6 +35,11 @@ public class LoginController extends BaseController {
 
     @Autowired
     ItemService itemService;
+
+    @Autowired
+    UserService userService;
+
+
 
     /**
      * 管理员登录页面
@@ -101,5 +105,67 @@ public class LoginController extends BaseController {
 
         return "login/uIndex";
     }
+
+    /**
+     * 普通用户注册
+     */
+    @RequestMapping("/res")
+    public String res(){
+        return "login/res";
+    }
+
+
+    /**
+     * 执行普通用户注册
+     * @return
+     */
+    @RequestMapping("/toRes")
+    public String toRes(User u){
+        userService.insert(u);
+        return "login/uLogin";
+    }
+
+    /**
+     * 普通用户登录入口
+     * @return
+     */
+    @RequestMapping("/uLogin")
+    public String uLogin(){
+        return "login/uLogin";
+    }
+
+    /**
+     * 执行普通用户登录
+     * @param u
+     * @param request
+     * @return
+     */
+    @RequestMapping("/utoLogin")
+    public String utoLogin(User u,HttpServletRequest request){
+        User byEntity =userService.getByEntity(u);
+        if (byEntity == null){
+            return "redirect:/login/res.action";
+        }else {
+            request.getSession().setAttribute("role",2);
+            request.getSession().setAttribute("username",byEntity.getUserName());
+            request.getSession().setAttribute("userId",byEntity.getId());
+            return "redirect:/login/uIndex.action";
+        }
+
+        /**前端用户退出*/
+
+    }
+
+
+
+    @RequestMapping("/uTui")
+    public String uTui(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.invalidate();
+        return "redirect:/login/uIndex.action";
+    }
+
+
+
 
 }
