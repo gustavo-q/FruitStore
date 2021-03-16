@@ -152,12 +152,12 @@ public class LoginController extends BaseController {
             return "redirect:/login/uIndex.action";
         }
 
-        /**前端用户退出*/
+
 
     }
 
 
-
+    /**前端用户退出*/
     @RequestMapping("/uTui")
     public String uTui(HttpServletRequest request){
         HttpSession session = request.getSession();
