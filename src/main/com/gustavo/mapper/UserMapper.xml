@@ -32,16 +32,16 @@
             passWord = #{passWord},
         </if>
         <if test="phone != null">
-            phone = #{phone}
+            phone = #{phone},
         </if>
         <if test="realName != null">
-            realName = #{realName}
+            realName = #{realName},
         </if>
         <if test="sex != null">
-            sex = #{sex}
+            sex = #{sex},
         </if>
         <if test="address != null">
-            address = #{address}
+            address = #{address},
         </if>
         <if test="email != null">
             email = #{email}

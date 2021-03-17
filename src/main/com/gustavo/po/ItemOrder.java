@@ -2,6 +2,7 @@ package com.gustavo.po;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 订单
@@ -45,6 +46,8 @@ public class ItemOrder implements Serializable {
      * 0.新建待发货1.已取消 2已发货3.到收货4已评价
      */
     private Integer status;
+
+    private List<OrderDetail> details;
 
     public ItemOrder(Integer id, Integer itemId, Integer userId, User user, String code, Date addTime, String total, Integer isDelete, Integer status) {
         this.id = id;
@@ -147,4 +150,13 @@ public class ItemOrder implements Serializable {
                 ", status=" + status +
                 '}';
     }
+
+    public List<OrderDetail> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<OrderDetail> details) {
+        this.details = details;
+    }
 }
+

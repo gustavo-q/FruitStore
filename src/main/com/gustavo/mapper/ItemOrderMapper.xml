@@ -23,6 +23,7 @@
         <result property="isDelete" column="isDelete" jdbcType="INTEGER"/>
         <result property="status" column="status" jdbcType="INTEGER"/>
         <association property="user" column="user_id" select="com.gustavo.mapper.UserMapper.load"/>
+        <collection property="details" column="id" ofType="com.gustavo.po.OrderDetail" select="com.gustavo.mapper.OrderDetailMapper.listByOrderId"/>
     </resultMap>
 
     <!-- 声明数据库字段 -->

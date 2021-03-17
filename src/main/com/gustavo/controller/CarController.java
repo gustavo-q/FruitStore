@@ -9,12 +9,14 @@ import com.gustavo.service.ItemService;
 import com.gustavo.utils.Consts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.List;
 
 @Controller
 @RequestMapping("/car")
@@ -58,6 +60,35 @@ public class CarController {
         js.put(Consts.RES,1);
         return js.toJSONString();
 
+    }
+
+
+
+    /**
+     * 转向我的购物车页面
+     */
+    @RequestMapping("/findBySql")
+    public String findBySql(Model model, HttpServletRequest request){
+        Object attribute = request.getSession().getAttribute(Consts.USERID);
+        if(attribute==null){
+            return "redirect:/login/toLogin";
+        }
+        Integer userId = Integer.valueOf(attribute.toString());
+        String sql = "select * from car where user_id="+userId+" order by id desc";
+        List<Car> list = carService.listBySqlReturnEntity(sql);
+        model.addAttribute("list",list);
+        return "car/car";
+    }
+
+
+    /**
+     * 删除购物车
+     */
+    @RequestMapping("/delete")
+    @ResponseBody
+    public String delete(Integer id){
+        carService.deleteById(id);
+        return "success";
     }
 
 }
