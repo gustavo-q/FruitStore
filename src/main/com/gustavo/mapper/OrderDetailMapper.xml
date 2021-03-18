@@ -28,7 +28,7 @@
 
     <!-- 实体类属性-->
     <sql id="OrderDetail_insert">
-        #{id},#{item_id},#{order_id},#{status},#{num},#{total}
+        #{id},#{itemId},#{orderId},#{status},#{num},#{total}
     </sql>
 
     <!-- 更新结果  -->
@@ -191,7 +191,7 @@
         <include refid="OrderDetail_field"/>
         ) values
         <foreach collection="list" item="item" index="index" separator=",">
-            (#{item.item_id},#{item.order_id},#{item.status},#{item.num},#{item.total})
+            (#{item.itemId},#{item.orderId},#{item.status},#{item.num},#{item.total})
         </foreach>
     </select>
 

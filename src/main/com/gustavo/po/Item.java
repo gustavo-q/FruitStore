@@ -1,6 +1,7 @@
 package com.gustavo.po;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 商品
@@ -93,6 +94,11 @@ public class Item implements Serializable{
      * 是否有效 0有效 1已删除
      */
     private Integer isDelete;
+
+    /**
+     * 评论列表
+     */
+    private List<Comment> pls;
 
     public Integer getId() {
         return id;
@@ -284,6 +290,14 @@ public class Item implements Serializable{
 
     public void setIsDelete(Integer isDelete) {
         this.isDelete = isDelete;
+    }
+
+    public List<Comment> getPls() {
+        return pls;
+    }
+
+    public void setPls(List<Comment> pls) {
+        this.pls = pls;
     }
 
     @Override

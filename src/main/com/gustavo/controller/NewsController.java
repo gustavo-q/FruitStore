@@ -83,4 +83,25 @@ public class NewsController extends BaseController {
     }
 
 
+
+    /**
+     * 前端公告列表
+     */
+    @RequestMapping("/list")
+    public String list(Model model){
+        Pager<News> pagers = newsService.findByEntity(new News());
+        model.addAttribute("pagers",pagers);
+        return "news/list";
+    }
+
+    /**
+     * 公告详情页面
+     */
+    @RequestMapping("/view")
+    public String view(Integer id,Model model){
+        News obj = newsService.load(id);
+        model.addAttribute("obj",obj);
+        return "news/view";
+    }
+
 }

@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="right_yh">
                                         <c:if test="${data.status==3}">
-                                            <a href="${ctx}/itemOrder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
+                                            <a href="${ctx}/itemorder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
                                                 去评价
                                             </a>
                                         </c:if>
@@ -78,7 +78,7 @@
                                 <font class="font24">总金额</font>
                                 <font class="font24 red">￥${data.total}</font>
                                 <c:if test="${data.status==0}">
-                                    <a href="${ctx}/itemOrder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         取消订单
                                     </a>
                                 </c:if>
@@ -88,7 +88,7 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${data.status==2}">
-                                    <a href="${ctx}/itemOrder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         去收货
                                     </a>
                                 </c:if>
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="right_yh">
                                         <c:if test="${data.status==3}">
-                                            <a href="${ctx}/itemOrder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
+                                            <a href="${ctx}/itemorder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
                                                 去评价
                                             </a>
                                         </c:if>
@@ -134,7 +134,7 @@
                                 <font class="font24">总金额</font>
                                 <font class="font24 red">￥${data.total}</font>
                                 <c:if test="${data.status==0}">
-                                    <a href="${ctx}/itemOrder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         取消订单
                                     </a>
                                 </c:if>
@@ -144,7 +144,7 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${data.status==2}">
-                                    <a href="${ctx}/itemOrder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         去收货
                                     </a>
                                 </c:if>
@@ -180,7 +180,7 @@
                                     </div>
                                     <div class="right_yh">
                                         <c:if test="${data.status==3}">
-                                            <a href="${ctx}/itemOrder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
+                                            <a href="${ctx}/itemorder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
                                                 去评价
                                             </a>
                                         </c:if>
@@ -191,7 +191,7 @@
                                 <font class="font24">总金额</font>
                                 <font class="font24 red">￥${data.total}</font>
                                 <c:if test="${data.status==0}">
-                                    <a href="${ctx}/itemOrder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         取消订单
                                     </a>
                                 </c:if>
@@ -201,7 +201,7 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${data.status==2}">
-                                    <a href="${ctx}/itemOrder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         去收货
                                     </a>
                                 </c:if>
@@ -237,7 +237,7 @@
                                     </div>
                                     <div class="right_yh">
                                         <c:if test="${data.status==3}">
-                                            <a href="${ctx}/itemOrder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
+                                            <a href="${ctx}/itemorder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
                                                 去评价
                                             </a>
                                         </c:if>
@@ -248,7 +248,7 @@
                                 <font class="font24">总金额</font>
                                 <font class="font24 red">￥${data.total}</font>
                                 <c:if test="${data.status==0}">
-                                    <a href="${ctx}/itemOrder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         取消订单
                                     </a>
                                 </c:if>
@@ -258,7 +258,7 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${data.status==2}">
-                                    <a href="${ctx}/itemOrder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         去收货
                                     </a>
                                 </c:if>
@@ -293,7 +293,7 @@
                                     </div>
                                     <div class="right_yh">
                                         <c:if test="${data.status==3}">
-                                            <a href="${ctx}/itemOrder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
+                                            <a href="${ctx}/itemorder/pj?id=${chil.itemId}" class="onfff block_yh tcenter font16 onHoverr" style="margin-top: 10px;padding-right: 6px;">
                                                 去评价
                                             </a>
                                         </c:if>
@@ -304,7 +304,7 @@
                                 <font class="font24">总金额</font>
                                 <font class="font24 red">￥${data.total}</font>
                                 <c:if test="${data.status==0}">
-                                    <a href="${ctx}/itemOrder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/qx?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         取消订单
                                     </a>
                                 </c:if>
@@ -314,7 +314,7 @@
                                     </a>
                                 </c:if>
                                 <c:if test="${data.status==2}">
-                                    <a href="${ctx}/itemOrder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
+                                    <a href="${ctx}/itemorder/sh?id=${data.id}" class="c_33 onHover font20 onorange right_yh" style="margin-top: 10px;padding-right: 6px;">
                                         去收货
                                     </a>
                                 </c:if>

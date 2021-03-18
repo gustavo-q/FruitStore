@@ -1,5 +1,6 @@
 package com.gustavo.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.gustavo.base.BaseController;
 import com.gustavo.po.*;
 import com.gustavo.service.ItemCategoryService;
@@ -13,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -166,6 +168,39 @@ public class LoginController extends BaseController {
     }
 
 
+    /**
+     * 修改密码入口
+     */
+    @RequestMapping("/pass")
+    public String pass(HttpServletRequest request){
+        Object attribute = request.getSession().getAttribute(Consts.USERID);
+        if(attribute==null){
+            return "redirect:/login/uLogin";
+        }
+        Integer userId = Integer.valueOf(attribute.toString());
+        User load = userService.load(userId);
+        request.setAttribute("obj",load);
+        return "login/pass";
+    }
 
+    /**
+     * 修改密码操作
+     */
+    @RequestMapping("/upass")
+    @ResponseBody
+    public String upass(String password,HttpServletRequest request){
+        Object attribute = request.getSession().getAttribute(Consts.USERID);
+        JSONObject js = new JSONObject();
+        if(attribute==null){
+            js.put(Consts.RES,0);
+            return js.toString();
+        }
+        Integer userId = Integer.valueOf(attribute.toString());
+        User load = userService.load(userId);
+        load.setPassWord(password);
+        userService.updateById(load);
+        js.put(Consts.RES,1);
+        return js.toString();
+    }
 
 }

@@ -212,7 +212,7 @@
         }
         $.ajax({
             type:"POST",
-            url:"${ctx}/itemOrder/exAdd",
+            url:"${ctx}/itemorder/exAdd",
             data:JSON.stringify(arr),
             contentType:"application/json",
             success:function (result) {
